@@ -19,6 +19,9 @@ public class MyWorld extends World
         super(600, 400, 1); 
         
         Turtle t = new Turtle("Oogway");
-        addObject(t, 100, 100);
+        addObject(t, 100, 300);
+        
+        Apple a = new Apple();
+        addObject(a, 300, 0);
     }
 }

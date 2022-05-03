@@ -25,5 +25,11 @@ public class Turtle extends Actor
         {
             move(3);
         }
+        
+        // eat apple
+        if(isTouching(Apple.class))
+        {
+            removeTouching(Apple.class);
+        }
     }
 }
