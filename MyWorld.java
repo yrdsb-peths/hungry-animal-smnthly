@@ -21,7 +21,14 @@ public class MyWorld extends World
         Turtle t = new Turtle("Oogway");
         addObject(t, 100, 300);
         
+        spawnApple();
+    }
+    
+    public void spawnApple()
+    {
+        int x = Greenfoot.getRandomNumber(600);
+        int y = 0;
         Apple a = new Apple();
-        addObject(a, 300, 0);
+        addObject(a, x, y);
     }
 }

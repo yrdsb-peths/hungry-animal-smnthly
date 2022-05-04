@@ -1,7 +1,7 @@
 import greenfoot.*;
 
 /**
- * Write a description of class Elephant here.
+ * Write a description of class Turtle here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -30,6 +30,8 @@ public class Turtle extends Actor
         if(isTouching(Apple.class))
         {
             removeTouching(Apple.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.spawnApple();
         }
     }
 }
