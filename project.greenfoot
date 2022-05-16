@@ -1,5 +1,6 @@
 #Greenfoot project file
-class.Apple.image=apple2.png
+class.Apple.image=cartoon\ apple.png
+class.MyWorld.image=cartoon\ beach.jpg
 class.Turtle.image=turtle.png
 dependency1.from=MyWorld
 dependency1.to=Label

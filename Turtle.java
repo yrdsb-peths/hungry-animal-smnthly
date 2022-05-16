@@ -17,6 +17,7 @@ public class Turtle extends Actor
         // eat apple
         if(isTouching(Apple.class))
         {
+            Greenfoot.playSound("sounds/bite sound effect.mp3");
             removeTouching(Apple.class);
             MyWorld world = (MyWorld) getWorld();
             world.increaseScore();

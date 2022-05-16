@@ -12,7 +12,7 @@ public class MyWorld extends World
         super(600, 400, 1); 
         
         Turtle t = new Turtle();
-        addObject(t, 100, 300);
+        addObject(t, 100,350);
         
         // score label
         addObject(scoreLabel, 50, 50);
