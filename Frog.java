@@ -1,7 +1,27 @@
 import greenfoot.*;
 
-public class Turtle extends Actor
+public class Frog extends Actor
 {
+    GreenfootImage[] images;
+    
+    public Frog()
+    {
+        images = new GreenfootImage[8];
+        for(int i=0; i<images.length; i++)
+        {
+            images[i] = new GreenfootImage("images/frog_idle/idle" + i + ".png");
+        }
+        setImage(images[7]);
+    }
+    
+    int curIndex = 0;
+    void idle()
+    {
+        setImage(images[curIndex]);
+        curIndex++;
+        curIndex %= 8;
+    }
+    
     public void act()
     {
         // action code
@@ -13,6 +33,8 @@ public class Turtle extends Actor
         {
             move(4);
         }
+        
+        idle();
         
         // eat apple
         if(isTouching(Apple.class))
