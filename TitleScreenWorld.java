@@ -31,6 +31,7 @@ public class TitleScreenWorld extends World
             Greenfoot.setWorld(world);
         }
     }
+    
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
