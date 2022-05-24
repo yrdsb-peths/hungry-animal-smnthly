@@ -1,9 +1,9 @@
 #Greenfoot project file
 class.Apple.image=cartoon\ apple.png
 class.Frog.image=frog.png
-class.GameOverWorld.image=corkboard.jpg
-class.MyWorld.image=cartoon\ beach.jpg
-class.TitleScreenWorld.image=cartoon\ beach.jpg
+class.GameOverWorld.image=forest\ background.png
+class.MyWorld.image=forest\ background.png
+class.TitleScreenWorld.image=forest\ background.png
 dependency1.from=TitleScreenWorld
 dependency1.to=Label
 dependency1.type=UsesDependency

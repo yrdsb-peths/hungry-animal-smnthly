@@ -17,17 +17,25 @@ public class TitleScreenWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
-        Label titleLabel = new Label("Hungry Frog", 70);
-        addObject(titleLabel,300, 200);
-        Label instructionLabel = new Label("Press <space> to begin", 50);
-        addObject(instructionLabel, 300, 270);
+        Label titleLabel = new Label("HUNGRY FROG", 70);
+        addObject(titleLabel, getWidth()/2, getHeight()/2);
+        Label instructionLabel = new Label("Press <space> to begin", 30);
+        addObject(instructionLabel, getWidth()/2, 245);
+        prepare();
     }
-    
+
     public void act(){
         if(Greenfoot.isKeyDown("space"))
         {
             MyWorld world = new MyWorld();
             Greenfoot.setWorld(world);
         }
+    }
+    /**
+     * Prepare the world for the start of the program.
+     * That is: create the initial objects and add them to the world.
+     */
+    private void prepare()
+    {
     }
 }
