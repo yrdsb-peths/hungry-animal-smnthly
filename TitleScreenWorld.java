@@ -17,10 +17,15 @@ public class TitleScreenWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
+        
+        // title
         Label titleLabel = new Label("HUNGRY FROG", 70);
         addObject(titleLabel, getWidth()/2, getHeight()/2);
+        
+        // start
         Label toBeginLabel = new Label("press <space> to begin", 30);
         addObject(toBeginLabel, getWidth()/2, 245);
+        
         prepare();
     }
 

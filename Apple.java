@@ -2,12 +2,14 @@ import greenfoot.*;
 
 public class Apple extends Actor
 {
+    int speed = 1;
+    
     public void act()
     {
-        // action code
+        // apple falls downwards
         int x = getX();
-        int y = getY();
-        setLocation(x, y + 2);
+        int y = getY() + speed;
+        setLocation(x, y);
         
         // game over
         MyWorld world = (MyWorld) getWorld();
@@ -16,5 +18,10 @@ public class Apple extends Actor
             world.gameOver();
             world.removeObject(this);
         }
+    }
+    
+    public void setSpeed(int spd)
+    {
+        speed = spd;
     }
 }

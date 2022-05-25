@@ -4,6 +4,7 @@ public class MyWorld extends World
 {
     public static int score = 0;
     public Label scoreLabel = new Label(score, 80);
+    int level = 1;
     
     // constructor for objects of class MyWorld
     public MyWorld()
@@ -11,8 +12,9 @@ public class MyWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1, false); 
         
-        Frog f = new Frog();
-        addObject(f, 100, 300);
+        // frog
+        Frog frog = new Frog();
+        addObject(frog, 100, 300);
         
         // score label
         addObject(scoreLabel, 50, 50);
@@ -24,14 +26,21 @@ public class MyWorld extends World
     {
         int x = Greenfoot.getRandomNumber(600);
         int y = 0;
-        Apple a = new Apple();
-        addObject(a, x, y);
+        Apple apple = new Apple();
+        addObject(apple, x, y);
+        apple.setSpeed(level);
     }
     
     public void increaseScore()
     {
         score++;
         scoreLabel.setValue(score);
+        
+        // after every 5 score, level increases by 1
+        if(score%5 == 0)
+        {
+            level += 1;
+        }
     }
     
     public void gameOver()
