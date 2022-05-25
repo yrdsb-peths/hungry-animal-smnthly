@@ -18,9 +18,12 @@ public class GameOverWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1);
         Label gameOverLabel = new Label("GAME OVER!", 100);
-        addObject(gameOverLabel, 300, 200);
+        addObject(gameOverLabel, getWidth()/2, getHeight()/2);
         
-        Label scoreLabel = new Label("Score: " + MyWorld.score, 50);
-        addObject(scoreLabel, 300, 280);
+        Label gameOverMessage = new Label("you failed in helping HUNGRY FROG :(", 25);
+        addObject(gameOverMessage, getWidth()/2, (getHeight()/2)-50);
+        
+        Label scoreLabel = new Label("you helped him eat " + MyWorld.score + " apples", 25);
+        addObject(scoreLabel, getWidth()/2, (getHeight()/2)+50);
     }
 }

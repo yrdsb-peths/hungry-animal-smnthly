@@ -17,10 +17,6 @@ public class MyWorld extends World
         // score label
         addObject(scoreLabel, 50, 50);
         
-        // instruction label
-        Label toMoveLabel = new Label("Press A and D to move", 30);
-        addObject(toMoveLabel, getWidth()-150, getHeight()-20);
-        
         spawnApple();
     }
     

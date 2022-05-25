@@ -19,16 +19,16 @@ public class TitleScreenWorld extends World
         super(600, 400, 1); 
         Label titleLabel = new Label("HUNGRY FROG", 70);
         addObject(titleLabel, getWidth()/2, getHeight()/2);
-        Label instructionLabel = new Label("Press <space> to begin", 30);
-        addObject(instructionLabel, getWidth()/2, 245);
+        Label toBeginLabel = new Label("press <space> to begin", 30);
+        addObject(toBeginLabel, getWidth()/2, 245);
         prepare();
     }
 
     public void act(){
         if(Greenfoot.isKeyDown("space"))
         {
-            MyWorld world = new MyWorld();
-            Greenfoot.setWorld(world);
+            InstructionsWorld instructions = new InstructionsWorld();
+            Greenfoot.setWorld(instructions);
         }
     }
     
